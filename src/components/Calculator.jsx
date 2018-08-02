@@ -103,6 +103,9 @@ class Calculator extends Component {
       case "*":
       case "-":
       case "+": {
+        if (this.state.expression === "") {
+          break;
+        }
         if (operators.indexOf(this.state.keyPressed) !== -1) {
           break;
         } else {
