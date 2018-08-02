@@ -7,6 +7,7 @@
     line-height: 70px;
     text-align: right;
     padding: 0 16px;
+    color: #999;
 }
 
 .increaseSize {
@@ -18,4 +19,5 @@
     line-height: 170px;
     text-align: right;
     padding: 0 16px;
+    color: black;
 }

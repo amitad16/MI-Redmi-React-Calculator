@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Display from "./Display";
 import Keypad from "./Keypad";
 
+import './Calculator.css';
+
 class Calculator extends Component {
   constructor(props) {
     super(props);
@@ -148,14 +150,8 @@ class Calculator extends Component {
     }
   };
   render() {
-    const style = {
-      width: 300,
-      height: 600,
-      margin: "100px auto",
-      position: "relative"
-    };
     return (
-      <div style={style}>
+      <div className='calculator'>
         <Display
           currentTerm={this.state.currentTerm}
           prevTerms={this.state.expression}

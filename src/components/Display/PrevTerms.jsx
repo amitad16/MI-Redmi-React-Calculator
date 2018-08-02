@@ -10,7 +10,7 @@ class PrevTerms extends Component {
       fontSize: "1.5em",
       textAlign: "right",
       padding: "0 16px",
-      overflowY: "scroll",
+      // overflowY: "scroll",
       maxHeight: "130px"
     };
 

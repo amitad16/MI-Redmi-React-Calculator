@@ -5,7 +5,11 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background: linear-gradient(60deg, #135058, #F1F2B5);
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
