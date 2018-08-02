@@ -29,7 +29,7 @@ class Calculator extends Component {
 
   // TODO: Implement % and Decimal values.
   handleClick = key => {
-    const operators = ["/", "*", "-", "+"];
+    const operators = ["/", "*", "-", "+", "."];
     switch (key) {
       case "AC": {
         this.setState({
@@ -80,6 +80,24 @@ class Calculator extends Component {
           }
         );
         break;
+      }
+      case ".": {
+        if (operators.indexOf(this.state.keyPressed) !== -1) {
+          break;
+        }
+        if (this.state.currentTerm.split('.').length === 1) {
+          this.setState(prevState => {
+            return {
+              keyPressed: key,
+              currentTerm: prevState.currentTerm + key,
+              expression: prevState.expression + key,
+              _isCalculating: true
+            };
+          });
+          break;
+        } else {
+          break;
+        }
       }
       case "/":
       case "*":
