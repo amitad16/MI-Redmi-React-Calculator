@@ -1,0 +1,21 @@
+.decreaseSize {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 1.5em;
+    line-height: 70px;
+    text-align: right;
+    padding: 0 16px;
+}
+
+.increaseSize {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 170px;
+    font-size: 2em;
+    line-height: 170px;
+    text-align: right;
+    padding: 0 16px;
+}
