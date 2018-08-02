@@ -12,7 +12,7 @@ class Calculator extends Component {
       currentTerm: "",
       expression: "",
       result: "",
-      isCalculating: false
+      _isCalculating: false
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -38,7 +38,7 @@ class Calculator extends Component {
           expression: "",
           result: "",
           keyPressed: key,
-          isCalculating: false
+          _isCalculating: false
         });
         break;
       }
@@ -49,7 +49,7 @@ class Calculator extends Component {
             keyPressed: key,
             currentTerm: prevState.currentTerm.slice(0, -1),
             expression: prevState.expression.slice(0, -1),
-            isCalculating: false
+            _isCalculating: false
           };
         });
         break;
@@ -59,7 +59,7 @@ class Calculator extends Component {
           prevState => {
             return {
               keyPressed: key,
-              expression: prevState.expression + prevState.currentTerm,
+              expression: prevState.expression,
               currentTerm: ""
             };
           },
@@ -73,7 +73,7 @@ class Calculator extends Component {
                   operator: "",
                   currentTerm: "",
                   expression: "",
-                  isCalculating: false
+                  _isCalculating: false
                 });
               }
             });
@@ -92,7 +92,8 @@ class Calculator extends Component {
             return {
               keyPressed: key,
               currentTerm: "",
-              isCalculating: true
+              expression: prevState.expression,
+              _isCalculating: true
             };
           });
         }
@@ -102,7 +103,7 @@ class Calculator extends Component {
           return {
             keyPressed: key,
             currentTerm: prevState.currentTerm + key,
-            isCalculating: true
+            _isCalculating: true
           };
         }, () => {
           this.setState(prevState => {
@@ -115,7 +116,7 @@ class Calculator extends Component {
                 if (result) {
                   this.setState({
                     result,
-                    isCalculating: true
+                    _isCalculating: true
                   });
                 }
               });
@@ -138,7 +139,7 @@ class Calculator extends Component {
           currentTerm={this.state.currentTerm}
           prevTerms={this.state.expression}
           result={this.state.result}
-          isCalculating={this.state.isCalculating}
+          isCalculating={this.state._isCalculating}
         />
         <Keypad clickHandler={this.handleClick} />
       </div>
